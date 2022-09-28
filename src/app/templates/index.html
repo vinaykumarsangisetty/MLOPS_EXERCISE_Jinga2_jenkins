@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Heart Disease Prediction</title>
 <style>
 
@@ -21,7 +21,6 @@
         padding: 6px;
         outline: none;
       }
-
       img {
           pointer-events: none;
           position: absolute;
@@ -61,98 +60,98 @@
 
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Age:</label>
-            <input type="number" class="form-control" name="Age" step="any" value="0" />
+            <label for="Age" style="color:white;">Age:</label>
+            <input type="number" class="form-control" name="Age" step="any" placeholder="Choose Age" id="Age" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Sex:</label>
-            <input type="number" class="form-control" name="Sex" step="any" value="0" />
+            <label for="Sex" style="color:white;">Sex:</label>
+            <select id="Sex" type="text" class="form-control" name="Sex" step="any" style="width: 103.5%;padding: 6px;text-align:center;" Required/><option value="Sex">Choose Gender</option><option value="M">M</option><option value="F">F</option></select>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">RestingBP:</label>
-            <input type="number" class="form-control" name="RestingBP" step="any" value="0" />
+            <label for="RestingBP" style="color:white;">RestingBP:</label>
+            <input type="number" class="form-control" name="RestingBP" step="any" placeholder="Enter RestingBP" id="RestingBP" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Cholesterol:</label>
-            <input type="number" class="form-control" name="Cholesterol" step="any" value="0" />
+            <label for="Cholesterol" style="color:white;">Cholesterol:</label>
+            <input type="number" class="form-control" name="Cholesterol" step="any" placeholder="Enter Cholesterol" id="Cholesterol" style="text-align:center" Required/>
         </div>
 
           <div class="col-md-6">
-            <label for="" style="color:white;">FastingBS:</label>
-            <input type="number" class="form-control" name="FastingBS" step="any" value="0" />
+            <label for="FastingBS" style="color:white;">FastingBS:</label>
+            <input type="number" class="form-control" name="FastingBS" step="any" placeholder="Enter FastingBS" id="FastingBS" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">MaxHR:</label>
-            <input type="number" class="form-control" name="MaxHR" step="any" value="0" />
+            <label for="MaxHR" style="color:white;">MaxHR:</label>
+            <input type="number" class="form-control" name="MaxHR" step="any" placeholder="Enter MaxHR" id="MaxHR" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Oldpeak:</label>
-            <input type="number" class="form-control" name="Oldpeak" step="any" value="0.0" />
+            <label for="Oldpeak" style="color:white;">Oldpeak:</label>
+            <input type="number" class="form-control" name="Oldpeak" step="any" placeholder="Enter Oldpeak" id="Oldpeak" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">ASY:</label>
-            <input type="number" class="form-control" name="ASY" step="any" value="0" />
+            <label for="ASY" style="color:white;">ASY:</label>
+            <input type="number" class="form-control" name="ASY" step="any" placeholder="Enter ASY" id="ASY" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">ATA:</label>
-            <input type="number" class="form-control" name="ATA" step="any" value="0" />
+            <label for="ATA" style="color:white;">ATA:</label>
+            <input type="number" class="form-control" name="ATA" step="any" placeholder="Enter ATA" id="ATA" style="text-align:center"/ Required>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">NAP:</label>
-            <input type="number" class="form-control" name="NAP" step="any" value="0" />
+            <label for="NAP" style="color:white;">NAP:</label>
+            <input type="number" class="form-control" name="NAP" step="any" placeholder="Enter NAP" id="NAP" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">TA:</label>
-            <input type="number" class="form-control" name="TA" step="any" value="0" />
+            <label for="TA" style="color:white;">TA:</label>
+            <input type="number" class="form-control" name="TA" step="any" placeholder="Enter TA" id="TA" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">LVH:</label>
-            <input type="number" class="form-control" name="LVH" step="any" value="0" />
+            <label for="LVH" style="color:white;">LVH:</label>
+            <input type="number" class="form-control" name="LVH" step="any" placeholder="Enter LVH" id="LVH" style="text-align:center" Required/>
         </div>
 
           <div class="col-md-6">
-            <label for="" style="color:white;">Normal:</label>
-            <input type="number" class="form-control" name="Normal" step="any" value="0" />
+            <label for="Normal" style="color:white;">Normal:</label>
+            <input type="number" class="form-control" name="Normal" step="any" placeholder="Enter Normal" id="Normal" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">ST:</label>
-            <input type="number" class="form-control" name="ST" step="any" value="0" />
+            <label for="ST" style="color:white;">ST:</label>
+            <input type="number" class="form-control" name="ST" step="any" placeholder="Enter ST" id="ST" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">N:</label>
-            <input type="number" class="form-control" name="N" step="any" value="0" />
+            <label for="N" style="color:white;">N:</label>
+            <input type="number" class="form-control" name="N" step="any" placeholder="Enter N" id="N" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Y:</label>
-            <input type="number" class="form-control" name="Y" step="any" value="0" />
+            <label for="Y" style="color:white;">Y:</label>
+            <input type="number" class="form-control" name="Y" step="any" placeholder="Enter Y" id="Y" style="text-align:center" Required/>
         </div>
 
          <div class="col-md-6">
-            <label for="" style="color:white;">Down:</label>
-            <input type="number" class="form-control" name="Down" step="any" value="0" />
+            <label for="Down" style="color:white;">Down:</label>
+            <input type="number" class="form-control" name="Down" step="any" placeholder="Enter Down" id="Down" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Flat:</label>
-            <input type="number" class="form-control" name="Flat" step="any" value="0" />
+            <label for="Flat" style="color:white;">Flat:</label>
+            <input type="number" class="form-control" name="Flat" step="any" placeholder="Enter Flat" id="Flat" style="text-align:center" Required/>
         </div>
 
         <div class="col-md-6">
-            <label for="" style="color:white;">Up:</label>
-            <input type="number" class="form-control" name="Up" step="any" value="0" />
+            <label for="Up" style="color:white;">Up:</label>
+            <input type="number" class="form-control" name="Up" step="any" placeholder="Enter Up" id="Up" style="text-align:center" Required/>
         </div>
         <br/>
         <center>
