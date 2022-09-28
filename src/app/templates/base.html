@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.heart-disease-prediction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="{{ url_for('static', path='./css/heart.jpg') }}" alt="yes" style="width:100%;">
+  <div class="heart-disease-prediction"><h2>RESULT OF HEART CONDITION is:</h2>Age&nbsp;:&nbsp;{{Age}}<br/>Sex&nbsp;:&nbsp;{{Sex}}<br/>RestingBP&nbsp;:&nbsp;{{RestingBP}}<br/>Cholesterol&nbsp;:&nbsp;{{Cholesterol}}<br/>FastingBS&nbsp;:&nbsp;{{FastingBS}}<br/>MaxHR&nbsp;:&nbsp;{{MaxHR}}<br/>Oldpeak&nbsp;:&nbsp;{{Oldpeak}}<br/>ASY&nbsp;:&nbsp;{{ASY}}<br/>ATA&nbsp;:&nbsp;{{ATA}}<br/>NAP&nbsp;:&nbsp;{{NAP}}<br/>TA&nbsp;:&nbsp;{{TA}}<br/>LVH&nbsp;:&nbsp;{{LVH}}<br/>Normal&nbsp;:&nbsp;{{Normal}}<br/>ST&nbsp;:&nbsp;{{ST}}<br/>N&nbsp;:&nbsp;{{N}}<br/>Y&nbsp;:&nbsp;{{Y}}<br/>Down&nbsp;:&nbsp;{{Down}}<br/>Flat&nbsp;:&nbsp;{{Flat}}<br/>Up&nbsp;:&nbsp;{{Up}}<br/>prediction&nbsp;:&nbsp;{{prediction}}</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+'run' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_pike (5d851577afa3c78afe9270d23a291551ffa96c2a78ef7f2060faeb824e3e667c): Bind for 0.0.0.0:50000 failed: port is already allocated.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>

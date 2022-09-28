@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>HEART DISEASE PREDICTION</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script>
+        div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=float], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab';
+  font-size: 0.75 rem;
+  font-weight: 250;
+}
+
+div#predicted_values {
+  width: 800px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+div.input-box {
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+div.input-box label {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  width: 20%;
+}
+
+div.input-box input {
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+input.button {
+  font-size: 1.5rem;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 4px 40px;
+}
+    </script>
+</head>
+<body>
+    <div id="predicted_value">
+        <form method="post" name="prediction"  >
+            <fieldset>
+
+                <div class="input-box">
+                    <label for="Weight">Enter Weight(float):</label><br>
+    <input type="float" name="Weight" value="1.0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="Length1">Enter Length1(float):</label><br>
+        <input type="float" name="Length1" value="2.0"/><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="Length2">Enter Length2(float):</label><br>
+
+        <input type="float" name="Length2" value="3.0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="Length3">Enter Length3(float):</label><br>
+         <input type="float" name="Length3" value="4.0"/><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="Height">Enter Height(float):</label><br>
+         <input type="float" name="Height" value="5.0"/><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="Width">Enter Width(float):</label><br>
+         <input type="float" name="Width" value="6.0"/><br><br>
+                </div>
+
+
+
+
+
+
+
+    <input type="submit" value="Predict" class="button1">
+            </fieldset>
+</form>
+
+    </div>
+<table style="width:100%" class="predicted_table">
+  <tr>
+    <th>Weight</th>
+    <th>Length1</th>
+    <th>Length2</th>
+      <th>Length3</th>
+      <th>Height</th>
+      <th>Width</th>
+      <th>Species</th>
+
+
+  </tr>
+  <tr>
+    <td>{{ weight }}</td>
+    <td>{{length1}}</td>
+    <td>{{length2}}</td>
+      <td>{{length3}}</td>
+    <td>{{height}}</td>
+      <td>{{width}}</td>
+      <td>{{species}}</td>
+
+  </tr>
+
+</table>

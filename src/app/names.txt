@@ -1,0 +1,1 @@
+[cust['Age'],cust['Sex'],cust['RestingBP'],cust['Cholesterol'],cust['FastingBS'],cust['MaxHR'],cust['Oldpeak'],cust['ASY'],cust['ATA'],cust['NAP'],cust['TA'],cust['LVH'],cust['Normal'],cust['ST'],cust['N']cust['Y']cust['Down'],cust['Flat'],cust['Up']

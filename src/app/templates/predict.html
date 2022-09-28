@@ -1,0 +1,226 @@
+<html>
+<head>
+    <title>Prediction of Heart Disease Details</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script>
+        div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=int], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab';
+  font-size: 0.75 rem;
+  font-weight: 250;
+}
+
+div#predicted_values {
+  width: 800px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+div.input-box {
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+div.input-box label {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  width: 20%;
+}
+
+div.input-box input {
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+input.button {
+  font-size: 1.5rem;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 4px 40px;
+}
+    </script>
+
+</head>
+<body>
+    <div id="predicted_value">
+        <form method="post" name="prediction" >
+            <fieldset>
+
+                <div class="input-box">
+                    <label for="Age">Enter Age(int):</label><br>
+    	<input type="int" name="Age" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="Sex">Enter Sex(int):</label><br>
+        <input type="int" name="Sex" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="RestingBP">Enter RestingBP(int):</label><br>
+		<input type="int" name="RestingBP" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="Cholesterol">Enter Cholesterol(int):</label><br>
+         <input type="int" name="Cholesterol" value="0"/><br><br>
+                </div>
+        		<div class="input-box">
+                    <label for="FastingBS">Enter FastingBS(int):</label><br>
+    	<input type="int" name="FastingBS" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="MaxHR">Enter MaxHR(int):</label><br>
+        <input type="int" name="MaxHR" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="Oldpeak">Enter Oldpeak(float):</label><br>
+		<input type="float" name="Oldpeak" value="0.0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="ASY">Enter ASY(int):</label><br>
+         <input type="int" name="ASY" value="0"/><br><br>
+                </div>
+        		<div class="input-box">
+                    <label for="ATA">Enter ATA(int):</label><br>
+    	<input type="int" name="ATA" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="NAP">Enter NAP(int):</label><br>
+        <input type="int" name="NAP" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+					 <label for="TA">Enter TA(int):</label><br>
+		<input type="int" name="TA" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="LVH">Enter LVH(int):</label><br>
+         <input type="int" name="LVH" value="0"/><br><br>
+                </div>
+				<div class="input-box">
+                     <label for="Normal">Enter Normal(int):</label><br>
+         <input type="int" name="Normal" value="0"/><br><br>
+                </div>
+        		<div class="input-box">
+                    <label for="ST">Enter ST(int):</label><br>
+    	<input type="int" name="ST" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="N">Enter N(int):</label><br>
+        <input type="int" name="N" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+				     <label for="Y">Enter Y(int):</label><br>
+		 <input type="int" name="Y" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+                     <label for="Down">Enter Down(int):</label><br>
+         <input type="int" name="Down" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+					 <label for="Flat">Enter Flat(int):</label><br>
+		 <input type="int" name="Flat" value="0"/><br><br>
+                </div>
+                <div class="input-box">
+					 <label for="Up">Enter Up(int):</label><br>
+		 <input type="int" name="Up" value="0"/><br><br>
+                </div>
+
+    <input type="submit" value="Predict" class="button1">
+            </fieldset>
+</form>
+
+    </div>
+<table style="width:100%" class="predicted_table">
+  <tr>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>RestingBP</th>
+      <th>Cholesterol</th>
+      <th>FastingBS</th>
+    <th>MaxHR</th>
+	<th>Oldpeak</th>
+	<th>ASY</th>
+	      <th>ATA</th>
+      	  <th>NAP</th>
+    <th>TA</th>
+	<th>LVH</th>
+	<th>Normal</th>
+	      <th>ST</th>
+      	  <th>N</th>
+    <th>Y</th>
+	<th>Down</th>
+	<th>Flat</th>
+	      <th>Up</th>
+      	  <th>prediction</th>
+
+
+  </tr>
+  <tr>
+    <td>{{ Age }}</td>
+	<td>{{Sex}}</td>
+	    <td>{{RestingBP}}</td>
+	      <td>{{Cholesterol}}</td>
+	      <td>{{FastingBS}}</td>
+	<td>{{ MaxHR }}</td>
+	<td>{{Oldpeak}}</td>
+	    <td>{{ASY}}</td>
+	      <td>{{ATA}}</td>
+	      <td>{{NAP}}</td>
+	<td>{{ TA }}</td>
+	<td>{{LVH}}</td>
+	    <td>{{Normal}}</td>
+	      <td>{{ST}}</td>
+	      <td>{{N}}</td>
+	<td>{{ Y }}</td>
+	<td>{{Down}}</td>
+	    <td>{{Flat}}</td>
+	      <td>{{Up}}</td>
+
+  </tr>
+
+</table>
+<a </a>
+</body>
+</html>
