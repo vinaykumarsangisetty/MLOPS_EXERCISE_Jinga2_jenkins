@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>"RESULT OF THE HEART" is:
+<style>
+body{
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        height: 180vh;
+        font-family: cursive;
+      }
+
+     input,
+        textarea {
+        width: 100%;
+        padding: 5px;
+        outline: none;
+      }
+
+      img {
+          pointer-events: none;
+          position:absolute
+          filter: blur(3px);
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+       }
+
+      label {
+        line-height: 0.03rem;
+      }
+
+       input[type="submit"] {
+       transform: translate(2.2%);
+       padding: 3px;
+       margin-top: 0.6rem;
+       font-family: cursive;
+       font-weight: bold;
+      }
+
+     fieldset {
+       padding: 20px 40px;
+     }
+
+</style>
+</head>
+
+<body>
+
+<div>
+
+<img src="{{ url_for('static', path='./css/heart.jpg') }}" alt="yes"><p>Age&nbsp;:&nbsp;{{Age}}<br/>Sex&nbsp;:&nbsp;{{Sex}}<br/>RestingBP&nbsp;:&nbsp;{{RestingBP}}<br/>Cholesterol&nbsp;:&nbsp;{{Cholesterol}}<br/>FastingBS&nbsp;:&nbsp;{{FastingBS}}<br/>MaxHR&nbsp;:&nbsp;{{MaxHR}}<br/>Oldpeak&nbsp;:&nbsp;{{Oldpeak}}<br/>ASY&nbsp;:&nbsp;{{ASY}}<br/>ATA&nbsp;:&nbsp;{{ATA}}<br/>NAP&nbsp;:&nbsp;{{NAP}}<br/>TA&nbsp;:&nbsp;{{TA}}<br/>LVH&nbsp;:&nbsp;{{LVH}}<br/>Normal&nbsp;:&nbsp;{{Normal}}<br/>ST&nbsp;:&nbsp;{{ST}}<br/>N&nbsp;:&nbsp;{{N}}<br/>Y&nbsp;:&nbsp;{{Y}}<br/>Down&nbsp;:&nbsp;{{Down}}<br/>Flat&nbsp;:&nbsp;{{Flat}}<br/>Up&nbsp;:&nbsp;{{Up}}<br/>prediction&nbsp;:&nbsp;{{prediction}}</p>
+
+</div>
+
+
+
+</body>
+
+
+</html>
+

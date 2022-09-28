@@ -1,0 +1,1 @@
+'Age' = Age, 'Sex' =Sex, 'RestingBP' =RestingBP, 'Cholesterol' =Cholesterol, 'FastingBS'= FastingBS, 'MaxHR' =MaxHR, 'Oldpeak' =Oldpeak, 'ASY'= ASY, 'ATA'=ATA, 'NAP'=NAP, 'TA'=TA, 'LVH'=LVH, 'Normal'=Normal, 'ST'=ST, 'N'=N, 'Y'=Y, 'Down'=Down, 'Flat'=Flat, 'Up'=Up

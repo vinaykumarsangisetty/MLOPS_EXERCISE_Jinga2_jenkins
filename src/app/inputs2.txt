@@ -1,0 +1,21 @@
+<td>{{ Age }}</td>
+<td>{{Sex}}</td>
+    <td>{{RestingBP}}</td>
+      <td>{{Cholesterol}}</td>
+      <td>{{FastingBS}}</td>
+<td>{{ MaxHR }}</td>
+<td>{{Oldpeak}}</td>
+    <td>{{ASY}}</td>
+      <td>{{ATA}}</td>
+      <td>{{NAP}}</td>
+<td>{{ TA }}</td>
+<td>{{LVH}}</td>
+    <td>{{Normal}}</td>
+      <td>{{ST}}</td>
+      <td>{{N}}</td>
+<td>{{ Y }}</td>
+<td>{{Down}}</td>
+    <td>{{Flat}}</td>
+      <td>{{Up}}</td>
+      
+      

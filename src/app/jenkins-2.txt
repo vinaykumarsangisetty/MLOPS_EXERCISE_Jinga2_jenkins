@@ -1,0 +1,171 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+'run' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_pike (5d851577afa3c78afe9270d23a291551ffa96c2a78ef7f2060faeb824e3e667c): Bind for 0.0.0.0:50000 failed: port is already allocated.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+docker: Error response from daemon: driver failed programming external connectivity on endpoint jovial_saha (a7b41e9fab0a3fec7c239094f684f13f1458c191768b54cf9d36686b0c635e70): Bind for 0.0.0.0:50000 failed: port is already allocated.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+docker: Error response from daemon: driver failed programming external connectivity on endpoint wonderful_chatelet (3eed0a1acc39c4636189f2e8724b24dd118694dfe45369cdddc2eafe623ff478): Bind for 0.0.0.0:50000 failed: port is already allocated.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -u root -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2022-09-28 04:27:56.376+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-28 04:28:01.260+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-28 04:28:01.504+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 11.0.16.1+1
+2022-09-28 04:28:02.392+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-28 04:28:02.607+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-28 04:28:04.310+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2022-09-28 04:28:04.978+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@4d8286c4{Jenkins v2.361.1,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+2022-09-28 04:28:05.040+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@e84a8e1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-28 04:28:05.123+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@32c8e539{STARTING}[10.0.11,sto=0] @10971ms
+2022-09-28 04:28:05.130+0000 [id=25]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-28 04:28:05.880+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-28 04:28:05.951+0000 [id=39]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-28 04:28:08.409+0000 [id=31]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-28 04:28:08.429+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-28 04:28:08.479+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-28 04:28:09.263+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-28 04:28:09.265+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-28 04:28:09.266+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-28 04:28:09.273+0000 [id=39]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-28 04:28:09.344+0000 [id=58]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-28 04:28:09.376+0000 [id=58]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/var/jenkins_home/war/WEB-INF/lib/groovy-all-2.4.21.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2022-09-28 04:28:10.924+0000 [id=35]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+bce740058e1e473eb65d9328c3bc8b16
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2022-09-28 04:28:11.578+0000 [id=58]    INFO    hudson.util.Retrier#start: The attempt #1 to do the action check updates server failed with an allowed exception:
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:313)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:222)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:129)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:353)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:443)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:421)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:183)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:572)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:201)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1592)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.PluginManager.checkUpdatesServer(PluginManager.java:1951)
+        at hudson.util.Retrier.start(Retrier.java:62)
+        at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1922)
+        at jenkins.DailyCheck.execute(DailyCheck.java:93)
+        at hudson.model.AsyncPeriodicWork.lambda$doRun$1(AsyncPeriodicWork.java:102)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+2022-09-28 04:28:11.582+0000 [id=58]    INFO    hudson.util.Retrier#start: Calling the listener of the allowed exception 'PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target' at the attempt #1 to do the action check updates server
+2022-09-28 04:28:11.600+0000 [id=58]    INFO    hudson.util.Retrier#start: Attempted the action check updates server for 1 time(s) with no success
+2022-09-28 04:28:11.611+0000 [id=58]    SEVERE  hudson.PluginManager#doCheckUpdatesServer: Error checking update sites for 1 attempt(s). Last exception was: SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-09-28 04:28:11.630+0000 [id=58]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 2,279 ms
+2022-09-28 04:28:11.858+0000 [id=35]    WARNING hudson.model.UpdateCenter#updateDefaultSite: Upgrading Jenkins. Failed to update the default Update Site 'default'. Plugin upgrades may fail.
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:313)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:222)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:129)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:353)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:443)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:421)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:183)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:572)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:201)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1592)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.model.UpdateCenter.updateDefaultSite(UpdateCenter.java:2672)
+        at jenkins.install.SetupWizard.init(SetupWizard.java:209)
+        at jenkins.install.InstallState$InitialSecuritySetup.initializeState(InstallState.java:182)
+        at jenkins.model.Jenkins.setInstallState(Jenkins.java:1133)
+        at jenkins.install.InstallUtil.proceedToNextStateFrom(InstallUtil.java:99)
+        at jenkins.install.InstallState$Unknown.initializeState(InstallState.java:88)
+        at jenkins.model.Jenkins$15.run(Jenkins.java:3499)
+        at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
+        at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)
+        at jenkins.model.Jenkins$5.runTask(Jenkins.java:1160)
+        at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:222)
+        at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:121)
+        at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:70)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+2022-09-28 04:28:11.862+0000 [id=44]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-28 04:28:11.927+0000 [id=24]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-28 04:32:05.007+0000 [id=26]    INFO    winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>

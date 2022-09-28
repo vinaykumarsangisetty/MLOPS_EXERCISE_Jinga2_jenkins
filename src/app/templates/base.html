@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Refresh" content="180; url='/'" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.heart-disease-prediction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+TABLE, TH, TD {
+  border:1px solid white;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="{{ url_for('static', path='./css/heart.jpg') }}" alt="yes" style="width:100%;">
+  <div class="heart-disease-prediction"><h2>RESULT OF HEART CONDITION is:</h2>
+    <TABLE style="width:100%">
+    <TR><TH>Age<TD>{{Age}}
+    <TR><TH>Sex<TD>{{Sex}}
+    <TR><TH>RestingBP<TD>{{RestingBP}}
+    <TR><TH>Cholesterol<TD>{{Cholesterol}}
+    <TR><TH>FastingBS<TD>{{FastingBS}}
+    <TR><TH>MaxHR<TD>{{MaxHR}}
+    <TR><TH>Oldpeak<TD>{{Oldpeak}}
+    <TR><TH>ASY<TD>{{ASY}}
+    <TR><TH>ATA<TD>{{ATA}}
+    <TR><TH>NAP<TD>{{NAP}}
+    <TR><TH>TA<TD>{{TA}}
+    <TR><TH>LVH<TD>{{LVH}}
+    <TR><TH>Normal<TD>{{Normal}}
+    <TR><TH>ST<TD>{{ST}}
+    <TR><TH>N<TD>{{N}}
+    <TR><TH>Y<TD>{{Y}}
+    <TR><TH>Down<TD>{{Down}}
+    <TR><TH>Flat<TD>{{Flat}}
+    <TR><TH>Up<TD>{{Up}}
+    <TR><TH>prediction<TD>{{prediction}}     
+</TABLE>
+  <p><a href="/" style="color:white;font-size: 25px;font-family:Serif;"><b>PREDICT AGAIN</b></a></p>
+  </div>
+</div>
+
+</body>
+</html>

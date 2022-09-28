@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+WORKDIR /usr/app/
+COPY . /usr/app/
+EXPOSE 8000
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+ENTRYPOINT [ "python3" ]
+CMD ["main.py"]
+

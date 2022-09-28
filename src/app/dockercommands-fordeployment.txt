@@ -1,0 +1,29 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker images
+REPOSITORY       TAG       IMAGE ID       CREATED        SIZE
+heart_diseases   latest    ef7c56ce3021   21 hours ago   1.33GB
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker tag heart_diseases vinaykumarsangi/heart_diseases
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker push vinaykumarsangi/heart_diseases
+Using default tag: latest
+The push refers to repository [docker.io/vinaykumarsangi/heart_diseases]
+ab5d4fa5ac47: Pushed
+85d542d23bb1: Pushed
+afc116af41fb: Pushed
+cfaf31c08a88: Pushed
+83c32412ce19: Pushed
+5504a9d7aac5: Pushed
+7f5cbd8cc787: Mounted from library/ubuntu
+latest: digest: sha256:963d3b580990e74c20c9d8ae34eec0c2edee1dd83fcc31fed674872023b314df size: 1794
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>

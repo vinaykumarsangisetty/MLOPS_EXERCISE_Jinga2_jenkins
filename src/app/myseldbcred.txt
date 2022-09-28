@@ -1,0 +1,3 @@
+Server Name: hdmysql.mysql.database.azure.com
+
+Server admin login Name: AbracaData2022@hdmysql

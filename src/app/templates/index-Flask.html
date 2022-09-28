@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+	<center>
+            <h1> Heart Disease Prediction </h1>
+            <br><br><br>
+            <form method="post" action="/predict">
+            Age: <input type="text" name="Age"><br><br>
+            Sex: <input type="text" name="Sex"><br><br>
+            RestingBP: <input type="text" name="RestingBP"><br><br>
+            Cholesterol: <input type="text" name="Cholesterol"><br><br>
+            FastingBS: <input type="text" name="FastingBS"><br><br>
+            MaxHR: <input type="text" name="MaxHR"><br><br>
+            Oldpeak: <input type="text" name="Oldpeak"><br><br>
+			ASY: <input type="text" name="ASY"><br><br>
+			ATA: <input type="text" name="ATA"><br><br>
+			NAP: <input type="text" name="NAP"><br><br>
+			TA: <input type="text" name="TA"><br><br>
+			LVH: <input type="text" name="LVH"><br><br>
+			Normal: <input type="text" name="Normal"><br><br>
+			ST: <input type="text" name="ST"><br><br>
+			N: <input type="text" name="N"><br><br>
+			Y: <input type="text" name="Y"><br><br>
+			Down: <input type="text" name="Down"><br><br>
+			Flat: <input type="text" name="Flat"><br><br>
+			Up: <input type="text" name="Up"><br><br>
+            <input type="submit" value="submit"><br><br>
+
+</form>
+<br>
+<br>
+<br>
+{{prediction_text}}
+<p>Designed by Abraca-Data</p>
+
+
+
+        </center>
+    </body>
+</html>

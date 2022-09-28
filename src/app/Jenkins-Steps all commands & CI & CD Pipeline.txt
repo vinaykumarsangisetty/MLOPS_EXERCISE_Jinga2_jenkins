@@ -1,0 +1,311 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker pull jenkins/jenkins:lts-jdk11
+lts-jdk11: Pulling from jenkins/jenkins
+1671565cc8df: Pull complete
+1e010a8344e7: Pull complete
+f7406b2e1315: Pull complete
+a7516ebe83d2: Pull complete
+a51dca64e82b: Pull complete
+77ef07b6a141: Pull complete
+2ac030a719df: Pull complete
+263bf74244c0: Pull complete
+620f54e03b44: Pull complete
+59e43d37c904: Pull complete
+c9dbe2415122: Pull complete
+2c049b4765e9: Pull complete
+c2b2538c867b: Pull complete
+57c5d5e596fd: Pull complete
+Digest: sha256:5508cb1317aa0ede06cb34767fb1ab3860d1307109ade577d5df871f62170214
+Status: Downloaded newer image for jenkins/jenkins:lts-jdk11
+docker.io/jenkins/jenkins:lts-jdk11
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2022-09-26 07:09:02.008+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-26 07:09:04.322+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-26 07:09:04.478+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 11.0.16.1+1
+2022-09-26 07:09:05.230+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-26 07:09:05.418+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-26 07:09:06.911+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2022-09-26 07:09:07.487+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@4d8286c4{Jenkins v2.361.1,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+2022-09-26 07:09:07.558+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@e84a8e1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-26 07:09:07.618+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@32c8e539{STARTING}[10.0.11,sto=0] @6808ms
+2022-09-26 07:09:07.658+0000 [id=25]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-26 07:09:08.530+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-26 07:09:08.600+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-26 07:09:10.808+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-26 07:09:10.821+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-26 07:09:10.842+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-26 07:09:11.507+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-26 07:09:11.508+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-26 07:09:11.508+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-26 07:09:11.510+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-26 07:09:11.591+0000 [id=58]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-26 07:09:11.632+0000 [id=58]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/var/jenkins_home/war/WEB-INF/lib/groovy-all-2.4.21.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2022-09-26 07:09:13.010+0000 [id=30]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+1f0e673df5a048318b717adf35af5502
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2022-09-26 07:09:13.581+0000 [id=30]    WARNING hudson.model.UpdateCenter#updateDefaultSite: Upgrading Jenkins. Failed to update the default Update Site 'default'. Plugin upgrades may fail.
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:313)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:222)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:129)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:353)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:443)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:421)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:183)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:572)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:201)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1592)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.model.UpdateCenter.updateDefaultSite(UpdateCenter.java:2672)
+        at jenkins.install.SetupWizard.init(SetupWizard.java:209)
+        at jenkins.install.InstallState$InitialSecuritySetup.initializeState(InstallState.java:182)
+        at jenkins.model.Jenkins.setInstallState(Jenkins.java:1133)
+        at jenkins.install.InstallUtil.proceedToNextStateFrom(InstallUtil.java:99)
+        at jenkins.install.InstallState$Unknown.initializeState(InstallState.java:88)
+        at jenkins.model.Jenkins$15.run(Jenkins.java:3499)
+        at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
+        at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)
+        at jenkins.model.Jenkins$5.runTask(Jenkins.java:1160)
+        at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:222)
+        at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:121)
+        at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:70)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+2022-09-26 07:09:13.588+0000 [id=58]    INFO    hudson.util.Retrier#start: The attempt #1 to do the action check updates server failed with an allowed exception:
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:313)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:222)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:129)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:353)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:443)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:421)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:183)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:572)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:201)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1592)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.PluginManager.checkUpdatesServer(PluginManager.java:1951)
+        at hudson.util.Retrier.start(Retrier.java:62)
+        at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1922)
+        at jenkins.DailyCheck.execute(DailyCheck.java:93)
+        at hudson.model.AsyncPeriodicWork.lambda$doRun$1(AsyncPeriodicWork.java:102)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+2022-09-26 07:09:13.590+0000 [id=34]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-26 07:09:13.592+0000 [id=58]    INFO    hudson.util.Retrier#start: Calling the listener of the allowed exception 'PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target' at the attempt #1 to do the action check updates server
+2022-09-26 07:09:13.617+0000 [id=58]    INFO    hudson.util.Retrier#start: Attempted the action check updates server for 1 time(s) with no success
+2022-09-26 07:09:13.621+0000 [id=58]    SEVERE  hudson.PluginManager#doCheckUpdatesServer: Error checking update sites for 1 attempt(s). Last exception was: SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-09-26 07:09:13.639+0000 [id=58]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 2,042 ms
+2022-09-26 07:09:13.680+0000 [id=24]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-26 07:11:40.420+0000 [id=74]    INFO    hudson.PluginManager#install: Starting installation of a batch of 0 plugins plus their dependencies
+2022-09-26 07:11:40.433+0000 [id=81]    INFO    h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batch…
+2022-09-26 07:11:40.542+0000 [id=83]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-26 07:11:40.549+0000 [id=86]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-26 07:11:40.551+0000 [id=91]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-26 07:11:40.553+0000 [id=96]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-26 07:11:40.560+0000 [id=85]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-26 07:11:40.561+0000 [id=85]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-26 07:11:40.563+0000 [id=85]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-26 07:11:40.569+0000 [id=85]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-26 07:11:40.582+0000 [id=90]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-26 07:11:40.583+0000 [id=94]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-26 07:11:40.609+0000 [id=81]    INFO    h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 0 plugins in 0.17 sec
+2022-09-26 07:14:03.482+0000 [id=101]   INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of skip-certificate-check on behalf of vinaykumarsangi
+2022-09-26 07:14:03.488+0000 [id=101]   INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading skip-certificate-check
+2022-09-26 07:14:03.799+0000 [id=101]   WARNING hudson.ClassicPluginStrategy#createClassJarFromWebInfClasses: Created /var/jenkins_home/plugins/skip-certificate-check/WEB-INF/lib/classes.jar; update plugin to a version created with a newer harness
+2022-09-26 07:14:03.981+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/mailer.jpi
+2022-09-26 07:14:04.158+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/bouncycastle-api.jpi
+2022-09-26 07:14:04.630+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/instance-identity.jpi
+2022-09-26 07:14:04.681+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/javax-mail-api.jpi
+2022-09-26 07:14:04.780+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/display-url-api.jpi
+2022-09-26 07:14:04.821+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/javax-activation-api.jpi
+2022-09-26 07:14:04.888+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/matrix-auth.jpi
+2022-09-26 07:14:04.949+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/sshd.jpi
+2022-09-26 07:14:05.090+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/windows-slaves.jpi
+2022-09-26 07:14:05.158+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/antisamy-markup-formatter.jpi
+2022-09-26 07:14:05.322+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/jquery3-api.jpi
+2022-09-26 07:14:05.371+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/caffeine-api.jpi
+2022-09-26 07:14:05.421+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/plugin-util-api.jpi
+2022-09-26 07:14:05.461+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/popper2-api.jpi
+2022-09-26 07:14:05.499+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/scm-api.jpi
+2022-09-26 07:14:05.520+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/matrix-project.jpi
+2022-09-26 07:14:05.553+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/checks-api.jpi
+2022-09-26 07:14:05.571+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/bootstrap5-api.jpi
+2022-09-26 07:14:05.640+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/workflow-api.jpi
+2022-09-26 07:14:05.660+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/echarts-api.jpi
+2022-09-26 07:14:06.528+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/snakeyaml-api.jpi
+2022-09-26 07:14:06.559+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/junit.jpi
+2022-09-26 07:14:06.591+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/workflow-support.jpi
+2022-09-26 07:14:06.622+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/font-awesome-api.jpi
+2022-09-26 07:14:06.672+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/script-security.jpi
+2022-09-26 07:14:06.693+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/workflow-step-api.jpi
+2022-09-26 07:14:06.713+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/jackson2-api.jpi
+2022-09-26 07:14:06.868+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/structs.jpi
+2022-09-26 07:14:06.898+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/command-launcher.jpi
+2022-09-26 07:14:06.928+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/jdk-tool.jpi
+2022-09-26 07:14:06.968+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/trilead-api.jpi
+2022-09-26 07:14:07.023+0000 [id=101]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: /var/jenkins_home/plugins/jaxb.jpi
+2022-09-26 07:14:07.208+0000 [id=102]   INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-26 07:14:07.210+0000 [id=106]   INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-26 07:14:07.220+0000 [id=112]   INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-26 07:14:07.223+0000 [id=115]   INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-26 07:14:07.228+0000 [id=105]   INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-26 07:14:07.229+0000 [id=105]   INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-26 07:14:07.231+0000 [id=113]   INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-26 07:14:07.233+0000 [id=113]   INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-26 07:14:07.238+0000 [id=115]   INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-26 07:14:07.239+0000 [id=115]   INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-26 07:14:07.248+0000 [id=101]   INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: skip-certificate-check
+2022-09-26 07:14:15.522+0000 [id=17]    INFO    hudson.model.UpdateCenter#doSafeRestart: Scheduling Jenkins reboot
+2022-09-26 07:14:15.541+0000 [id=119]   INFO    hudson.lifecycle.Lifecycle#onStatusUpdate: Restart in 10 seconds
+2022-09-26 07:14:25.540+0000 [id=119]   INFO    hudson.lifecycle.Lifecycle#onStop: Stopping Jenkins as requested by vinaykumarsangi
+2022-09-26 07:14:25.549+0000 [id=119]   INFO    hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+2022-09-26 07:14:25.562+0000 [id=119]   INFO    jenkins.model.Jenkins$16#onAttained: Started termination
+2022-09-26 07:14:25.597+0000 [id=119]   INFO    jenkins.model.Jenkins$16#onAttained: Completed termination
+2022-09-26 07:14:25.597+0000 [id=119]   INFO    jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+2022-09-26 07:14:25.648+0000 [id=124]   WARNING h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.slaves.JnlpSlaveAgentProtocol4, annotation=[none]]; skipping this component
+java.security.KeyStoreException: JENKINS-41987: no X509Certificate found; perhaps instance-identity plugin is not installed
+        at jenkins.slaves.JnlpSlaveAgentProtocol4.<init>(JnlpSlaveAgentProtocol4.java:106)
+        at jenkins.slaves.JnlpSlaveAgentProtocol4$$FastClassByGuice$$309130492.GUICE$TRAMPOLINE(<generated>)
+        at jenkins.slaves.JnlpSlaveAgentProtocol4$$FastClassByGuice$$309130492.apply(<generated>)
+        at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+        at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+        at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+        at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+        at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+        at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:568)
+        at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+        at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+        at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+        at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:296)
+        at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) [Guice/ErrorInjectingConstructor]: KeyStoreException: JENKINS-41987: no X509Certificate found; perhaps instance-identity plugin is not installed
+  at JnlpSlaveAgentProtocol4.<init>(JnlpSlaveAgentProtocol4.java:102)
+
+Learn more:
+  https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+
+1 error
+
+======================
+Full classname legend:
+======================
+JnlpSlaveAgentProtocol4: "jenkins.slaves.JnlpSlaveAgentProtocol4"
+KeyStoreException:       "java.security.KeyStoreException"
+========================
+End of classname legend:
+========================
+
+        at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+        at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+        at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+        at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:444)
+        at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+        at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1100)
+        at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:402)
+        at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:393)
+        at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:359)
+        at hudson.ExtensionList.load(ExtensionList.java:384)
+        at hudson.ExtensionList.ensureLoaded(ExtensionList.java:320)
+        at hudson.ExtensionList.iterator(ExtensionList.java:172)
+        at jenkins.AgentProtocol.of(AgentProtocol.java:111)
+        at hudson.TcpSlaveAgentListener$ConnectionHandler.run(TcpSlaveAgentListener.java:277)
+2022-09-26 07:14:25.770+0000 [id=119]   INFO    jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+2022-09-26 07:14:25.777+0000 [id=119]   INFO    jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+2022-09-26 07:14:25.788+0000 [id=119]   INFO    jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+2022-09-26 07:14:25.789+0000 [id=119]   INFO    hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+2022-09-26 07:14:25.790+0000 [id=26]    INFO    winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>
+
+
+
+
+
+
+Then in Browser - localhost:8080
+Then it will ask for password give above password: 1f0e673df5a048318b717adf35af5502
+Then Create a User name, Password, Confirm password, Full Name
+Skip plugin config
+Click on Manage Jenkins -> go to Advanced - Upload your file and click on Deploy Once after click on restart
+once after restart -> Login with your credentials-> Manage Jenkins->go to Advanced then At last instead of https: give it as http: and click on check now.
+
+After this you can see your updates in manage Jenkins.

@@ -1,0 +1,5 @@
+mysql_host: 'hdmysql.mysql.database.azure.com'
+mysql_user: 'AbracaData2022@hdmysql'
+# Enter your password in field below
+mysql_password: 'AbData@2022'
+mysql_db: 'hdmysql'

@@ -1,0 +1,58 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>
+C:\Users\QA592MK\Downloads\MLOps_Exercise>
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker build -t heart_diseases .
+[+] Building 379.1s (13/13) FINISHED
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 366B                                                                               0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                   9.4s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load build context                                                                                  0.0s
+ => => transferring context: 3.96kB                                                                                0.0s
+ => [1/7] FROM docker.io/library/ubuntu:latest@sha256:20fa2d7bb4de7723f542be5923b06c4d704370f0390e4ae9e1c833c8785  0.0s
+ => CACHED [2/7] WORKDIR /usr/app/                                                                                 0.0s
+ => [3/7] COPY . /usr/app/                                                                                         0.1s
+ => [4/7] RUN apt-get update && apt-get install -y python3 python3-pip                                           162.2s
+ => [5/7] RUN apt-get update && apt-get -y install libpq-dev gcc && pip install psycopg2                          18.8s
+ => [6/7] RUN pip install --upgrade pip                                                                            4.9s
+ => [7/7] RUN pip install -r requirements.txt                                                                    177.4s
+ => exporting to image                                                                                             6.2s
+ => => exporting layers                                                                                            6.2s
+ => => writing image sha256:8d3d023146c132915a3210065e418f66f362c87be53e9be06729282ed1ea393b                       0.0s
+ => => naming to docker.io/library/heart_diseases                                                                  0.0s
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker run -d -p 7000:7000 heart_diseases
+d58567cf324a41d49abf4eea22a4a1f7761040a26a22c50b25791d374f320369
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker tag heart_diseases vinaykumarsangi/heart_diseases
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>docker push vinaykumarsangi/heart_diseases
+Using default tag: latest
+The push refers to repository [docker.io/vinaykumarsangi/heart_diseases]
+3ef0c8ed9b62: Pushed
+e67a91a6f898: Pushed
+98d87cf8b365: Pushed
+a3d6a24e4748: Pushed
+d87e17c176a0: Pushed
+032e3bb9783e: Pushed
+7f5cbd8cc787: Layer already exists
+latest: digest: sha256:cd0afbf8312bb3708c9d41a6366e8ccf9d63e6966e46148cb001e82aadeb30a9 size: 1795
+
+C:\Users\QA592MK\Downloads\MLOps_Exercise>
