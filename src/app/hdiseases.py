@@ -2,7 +2,7 @@ from pydantic import BaseModel,Field
 # 2. Class which describes Hd measurements
 class heartdisease(BaseModel):
     Age : int
-    Sex: int
+    Sex: str
     RestingBP: int
     Cholesterol: int
     FastingBS: int

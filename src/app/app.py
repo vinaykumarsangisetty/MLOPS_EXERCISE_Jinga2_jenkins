@@ -87,12 +87,21 @@ def delete_note(ID_HD:int, hd: heartdisease, db: Session = Depends(get_db)):
 #    JSON data and return the predicted Bank Note with the confidence
 
 @app.post("/predict/",response_class=HTMLResponse)
-async def form_post(request: Request,db: Session = Depends(get_db),Age: int = Form(...),Sex:int=Form(...),RestingBP:int=Form(...),Cholesterol:int=Form(...),FastingBS:int=Form(...),MaxHR:int=Form(...), Oldpeak: float = Form(...),ASY:int=Form(...),ATA:int=Form(...),NAP:int=Form(...),TA:int=Form(...),LVH:int=Form(...), Normal: int = Form(...),ST:int=Form(...),N:int=Form(...),Y:int=Form(...),Down:int=Form(...),Flat:int=Form(...), Up: int = Form(...)):
-   
+async def form_post(request: Request,db: Session = Depends(get_db),Age: int = Form(...),Sex:str=Form(...),RestingBP:int=Form(...),Cholesterol:int=Form(...),FastingBS:int=Form(...),MaxHR:int=Form(...), Oldpeak: float = Form(...),ASY:int=Form(...),ATA:int=Form(...),NAP:int=Form(...),TA:int=Form(...),LVH:int=Form(...), Normal: int = Form(...),ST:int=Form(...),N:int=Form(...),Y:int=Form(...),Down:int=Form(...),Flat:int=Form(...), Up: int = Form(...)):
+    if Sex == "M":
+        Sex = 0
+    else:
+        Sex = 1
     HeartDisease = transformer.predict([[Age, Sex, RestingBP, Cholesterol, FastingBS, MaxHR, Oldpeak, ASY, ATA, NAP, TA, LVH, Normal, ST, N, Y, Down, Flat, Up]])
+    
+    if Sex == 0:
+        Sex = "M"
+    else:
+        Sex = "F"
 
 
     print("HeartDisease: ", HeartDisease)
+
     
     if (HeartDisease[0] > 0.5):
         HeartDisease = 1

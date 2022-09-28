@@ -5,7 +5,7 @@ class heart_disease(Base):
     __tablename__='heart_disease_prediction'
     id=Column(Integer,primary_key=True,index=True)
     Age =Column(Integer)
-    Sex= Column(Integer)
+    Sex= Column(String(10))
     RestingBP= Column(Integer)
     Cholesterol=Column(Integer)
     FastingBS=Column(Integer)
